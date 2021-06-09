@@ -84,7 +84,27 @@ jobs:
 
 Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository.
 
-
+CHANGE THE WORKFLOW to WHATSAPP Notification.
 Okayyy so i got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB). What I need to do is to find a Whatsapp workflow to use and replace mine with that..(oh found out i need to sign up for Twilio)
 
+Then from my twilio dashboard fetch Account Sid and Auth Token.
 
+To encrypt them, create new secrets in your repository named account_sid, auth_token, to_whatsapp_no and give it's value.
+
+Then i change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml.
+And I edit it to the following properties to newly edited  whatsapp-push-notify-action.yml file
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: whatsapp-notify
+        id: whatsapp-notify
+        env:
+          account_sid: ${{ secrets.account_sid }}
+          auth_token: ${{ secrets.auth_token }}
+          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
+
+
+        uses: khaled-ibtikar/whatsapp-push-notify-action@master
