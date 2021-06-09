@@ -5,9 +5,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: whatsapp-notify
-        run: echo 'Start!'
+        run: echo 'I got it!'
         env:
           account_sid: ${{ secrets.account_sid }}
           auth_token: ${{ secrets.auth_token }}
