@@ -9,7 +9,7 @@ jobs:
       - name: whatsapp-notify
         run: echo 'I got it!'
         with:
-          from: ${{ secrets.FROM }}
+          from: ${{ secrets.FROM_TWILIO }}
           to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
         env:
           account_sid: ${{ secrets.account_sid }}
