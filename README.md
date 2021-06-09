@@ -89,10 +89,11 @@ Okayyy so i got the workflow files in the directory. Now I want to change them, 
 
 Then from my twilio dashboard fetch Account Sid and Auth Token.
 
-To encrypt them, create new secrets in your repository named account_sid, auth_token, to_whatsapp_no and give it's value.
+To encrypt them, create new secrets in your repository named account_sid, auth_token, to_whatsapp_no and give it's value. Well, I did that, took the values from Twilio.
 
-Then i change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml.
-And I edit it to the following properties to newly edited  whatsapp-push-notify-action.yml file
+Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml.
+And I edited it to the following properties to newly edited  whatsapp-push-notify-action.yml file
+name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
 on: [push]
 jobs:
   build:
@@ -100,11 +101,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: whatsapp-notify
-        id: whatsapp-notify
+        run: echo 'Start!'
         env:
           account_sid: ${{ secrets.account_sid }}
           auth_token: ${{ secrets.auth_token }}
           to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
-
-
-        uses: khaled-ibtikar/whatsapp-push-notify-action@master
