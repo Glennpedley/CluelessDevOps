@@ -1,17 +1,16 @@
   
 name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
-on: push
+on:  [push, pull_request, issues, fork, watch]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: Glennpedley/CluelessDevOps@main
       - name: whatsapp-notify
         run: echo 'I got it!'
-        with:
-          from: ${{ secrets.FROM_TWILIO }}
-          to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
+       
+         
         env:
           account_sid: ${{ secrets.ACCOUNT_SID }}
           auth_token: ${{ secrets.AUTH_TOKEN }}
-         
+          to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
