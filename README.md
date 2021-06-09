@@ -85,6 +85,6 @@ jobs:
 Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository.
 
 
-
+Okayyy so i got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB). What I need to do is to find a Whatsapp workflow to use and replace mine with that..(oh found out i need to sign up for Twilio)
 
 
