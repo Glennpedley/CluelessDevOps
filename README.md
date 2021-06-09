@@ -63,4 +63,28 @@ As you implement and make changes, do a commit + push each time
 So how the heck do I initialize from here???
 
 
+CREATE An EXAMPLE WORKFLOW
+How? See here https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions
+
+So I went to my repository called CluelessDevOps and created the .github/workflows/ directory to store my workflow files. 
+
+I then went to the .github/workflows/ directory, created a new file called learn-github-actions.yml (yeah I copied the name, so sue me) and added the following code.
+
+name: learn-github-actions
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install -g bats
+      - run: bats -v
+
+
+Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository.
+
+
+
+
 
