@@ -10,8 +10,8 @@ jobs:
         run: echo 'I got it!'
         with:
           from: ${{ secrets.FROM_TWILIO }}
-          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
+          to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
         env:
-          account_sid: ${{ secrets.account_sid }}
-          auth_token: ${{ secrets.auth_token }}
+          account_sid: ${{ secrets.ACCOUNT_SID }}
+          auth_token: ${{ secrets.AUTH_TOKEN }}
          
