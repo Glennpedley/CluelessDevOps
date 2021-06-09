@@ -12,6 +12,55 @@ Then I, myself, who made the changes, and requested a pull request to myself, th
 
 So, basically, from my own file, I have a main and from the main, branches can be made where changes made to branches are not updated to main or destroying the main. Branches drop off and die also nevermind, main one still okay. Once the branches, test, deploy all okay, then can make pull request to merge with main. AND WHO APPROVES the pull requests? ME! Siapa raja? ME! Siapa lembu? Kita juga orangnya.
 
+Now the SHow and Tell itself
+
+Project 2: CI/CD
+Your Task
+Create a GitHub repository that contains your application code, 
+along with workflows that execute steps to 
+test, 
+package, or 
+deploy it.
+
+
+In a previous course you may have produced applications (frontend, backend, API) which is now disconnected to the MySQL server rendering them quite useless to use here,
+alternatively you could use this project as a basis. (Had a look, not gonna work for me)
+
+So we basically clone one repository that have all the above. Why not just say CLONE a GitHub repository instead of CREATE? No?
+
+
+
+
+Pushing new commits to the repository should trigger a workflow that 
+does something with your code.  
+It could be 
+a notification on a chat app, 
+executing tests, 
+packaging it up, or 
+deploying it to the cloud. 
+
+Bonus points if you do several of these, but that is not the expectation.
+
+
+
+SO MY CODE is the one I cloned, and I have to trigger a workflow that does something with my code?
+
+
+
+
+Tips & Guidelines
+Your GitHub repository should contain
+Application Source Code
+Workflow(s)
+README.md (or any other document) that explains the outcome, your steps, and your thought process
+Start with an empty (or initialized) GitHub repository. 
+
+Okay, initialized GitHUb means, all the changes from the point I started to make the changes.
+
+As you implement and make changes, do a commit + push each time
+
+
+So how the heck do I initialize from here???
 
 
 
