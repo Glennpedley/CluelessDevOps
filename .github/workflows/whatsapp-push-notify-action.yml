@@ -8,7 +8,10 @@ jobs:
       - uses: actions/checkout@main
       - name: whatsapp-notify
         run: echo 'I got it!'
+        with:
+          from: ${{ secrets.FROM }}
+          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
         env:
           account_sid: ${{ secrets.account_sid }}
           auth_token: ${{ secrets.auth_token }}
-          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
+         
