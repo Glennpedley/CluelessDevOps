@@ -44,6 +44,7 @@ Bonus points if you do several of these, but that is not the expectation.
 
 
 SO MY CODE is the one I cloned, and I have to trigger a workflow that does something with my code?
+AM going to do a whatsapp notification message then.
 
 
 
@@ -55,12 +56,11 @@ Workflow(s)
 README.md (or any other document) that explains the outcome, your steps, and your thought process
 Start with an empty (or initialized) GitHub repository. 
 
-Okay, initialized GitHUb means, all the changes from the point I started to make the changes.
+Okay, initialized GitHUb means, all the changes from the point I started to make the changes. Goodness totally forgot about this. All changes made in GitHub and not on local computer.
 
 As you implement and make changes, do a commit + push each time
+So how the heck do I initialize from here??? Dont have, did the local computer and committed the push ONCE, then just did the changes in GitHub instead.
 
-
-So how the heck do I initialize from here???
 
 
 CREATE An EXAMPLE WORKFLOW
@@ -82,17 +82,20 @@ jobs:
       - run: bats -v
 
 
-Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository.
+Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository. WHere got PUSH button? DUn have also.
+
 
 CHANGE THE WORKFLOW to WHATSAPP Notification.
-Okayyy so i got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB). What I need to do is to find a Whatsapp workflow to use and replace mine with that..(oh found out i need to sign up for Twilio)
+Okayyy so I got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB). What I need to do is to find a Whatsapp workflow to use and replace mine with that..(oh found out I need to sign up for Twilio from the readme of theo ther guy's repository)
 
-Then from my twilio dashboard fetch Account Sid and Auth Token.
+SO I did signed up at Twilio (at first didnt get anumber but got some US number ater cos nothing was working so might as well get it in case it affects the workflow)
+Then from my Twilio dashboard fetch Account Sid and Auth Token and put them in secrets page of github, which means... go to the repository I wan to put secrets in, then look for the "gear" icon which means settings, there are TWO gear icons that I saw... use the one in a line of many tabs.
 
 To encrypt them, create new secrets in your repository named account_sid, auth_token, to_whatsapp_no and give it's value. Well, I did that, took the values from Twilio.
 
 Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml.
-And I edited it to the following properties to newly edited  whatsapp-push-notify-action.yml file
+And I edited it to the following properties to newly edited  "whatsapp-push-notify-action.yml" file;
+
 name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
 on: [push]
 jobs:
@@ -125,3 +128,18 @@ I think they came from iishween/whatsapp-push-notify-action@master cos when i ch
 glennpedley/whatsapp-push-notify-action@master
 
 nothing jalan.
+
+SO with the above "test" I did some changes to test to find out for myself what works and what does not, ONE by bloody ONE.
+This readme is bascially to see that there are different versions and which codes we can use and works and which ones does not, more or less.
+I changed
+1) the "on" to include a pull request (yupe, it works, so if only one like push, can type push without the [] or with also can. But when more than one, just put [ then the event type separated by comma(s), and close with] (how the hell did that underline come in here?)
+WORKS. Can put many types
+
+2) the "uses" from "actions/checkout@main" to  "actions/checkout@v2 (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.
+IT WORKS. Both can be used. 
+
+3) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action
+
+I removed the id cos I dont know what file path that means at all.
+I edited the secret to use CAPITAL letter, will test if camel works just as well.
+
