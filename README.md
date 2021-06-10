@@ -187,3 +187,23 @@ Will figure this out in next few changes to codes along with what the "run: | ec
 Deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository? 
 Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over.
 Let's see if this works.Something is wrong with Twilio. The action ran fine.
+THis is the working code so far to be checked further.
+  
+name: When one of the following events occur in the master branch, a message is sent to the Whatsapp.
+on: [push, pull_request, issues, fork, watch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: whatsapp-notify
+   
+        env:
+          account_sid: ${{ secrets.ACCOUNT_SID }}
+          auth_token: ${{ secrets.AUTH_TOKEN }}
+          to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
+        uses: Glennpedley/CluelessDevOps@main
+      - name : Run
+        run: echo 'Start!'
+
+From here on out will check others if have time.
