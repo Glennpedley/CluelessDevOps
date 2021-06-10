@@ -5,5 +5,6 @@ Test 4 changed back to +65 but this time with twilio phone number active
 test 5 changed the Glennpedley/CluelessDevOps@main instead of actions/checkout@main
 test 6 changed the Glennpedley/CluelessDevOps@main to Glennpedley/whatsapp-push-notify-action@main
 test 7 changed uses to : ishween/whatsapp-push-notify-action@master from Glennpedley/whatsapp-push-notify-action@master DID NOT WORK
+test 8 changed uses to Glennpedley/CluelessDevOps@main WORKS LIKE A CHARM
 
 
