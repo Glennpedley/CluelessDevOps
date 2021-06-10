@@ -187,7 +187,7 @@ Will figure this out in next few changes to codes along with what the "run: | ec
 Deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository? 
 Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over.
 Let's see if this works.Something is wrong with Twilio. The action ran fine.
-THis is the working code so far to be checked further.
+This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work.
   
 name: When one of the following events occur in the master branch, a message is sent to the Whatsapp.
 on: [push, pull_request, issues, fork, watch]
