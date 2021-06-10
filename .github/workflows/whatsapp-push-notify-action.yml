@@ -12,7 +12,7 @@ jobs:
           to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
 
 
-        uses: ishween/whatsapp-push-notify-action@master
+        uses: Glennpedley/whatsapp-push-notify-action@master
       
       - name : Run
         run: |
