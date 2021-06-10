@@ -152,5 +152,6 @@ I edited the "secrets" path to use CAPITAL letter, will test if camel works just
 OKAY! BOTH WORKS, so capital or camel letters both also can use for secrets path.
 
 5) line 113:-
-I changed "ishween/whatsapp-push-notify-action@master" to "Glennpedley/whatsapp-push-notify-action@master"
+5.1) I removed "ishween/whatsapp-push-notify-action@master"
+5.2) I changed this uses to "Glennpedley/whatsapp-push-notify-action@master"
 
