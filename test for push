@@ -3,3 +3,4 @@ Round two test-using main instead of master and changed Echo to "I got it!"
 Test 3 - changed secrets phone number to 65 instead of +65
 Test 4 changed back to +65 but this time with twilio phone number active
 test 5 changed the Glennpedley/CluelessDevOps@main instead of actions/checkout@main
+test 6 changed the Glennpedley/CluelessDevOps@main to Glennpedley/whatsapp-push-notify-action@main
