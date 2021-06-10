@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action
+      - uses: actions/checkout@v2
       - name: whatsapp-notify
         id: whatsapp-notify
         env:
