@@ -1,5 +1,5 @@
 name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
-on: [push, pull_request]
+on: [push, pull_request, issues, fork, watch]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
           auth_token: ${{ secrets.auth_token }}
           to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
           
-        uses: Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action@main
+        uses: Glennpedley/whatsapp-push-notify-action@main
 
      
       
