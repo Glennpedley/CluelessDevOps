@@ -140,6 +140,7 @@ IT WORKS. Both can be used.
 
 3) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action
 
-I removed the id cos I dont know what file path that means at all.
-I edited the secret to use CAPITAL letter, will test if camel works just as well.
+4) I removed the id cos I dont know what file path that means at all.
+STILL WORKS.
+5) I edited the secret to use CAPITAL letter, will test if camel works just as well.
 
