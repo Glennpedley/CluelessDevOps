@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Glennpedley/CluelessDevOps@main
+      - uses: Glennpedley/whatsapp-push-notify-action.yml@main
       - name: whatsapp-notify
         run: echo 'I got it!'
        
