@@ -153,7 +153,7 @@ OKAY! BOTH WORKS, so capital or camel letters both also can use for secrets path
 
 5) line 113:-
 5.1) I removed "ishween/whatsapp-push-notify-action@master"
-DID NOT WORK - so means, I have to reference this repository for "something" and I am thinking that is why the "text" in the whatsapp message is?
+DID NOT WORK - so means, I have to reference this repository for "something" and I am thinking that is why or where the "text" in the whatsapp message is living?
 5.2) I changed this uses to "Glennpedley/whatsapp-push-notify-action@master"
 DID NOT WORK - so, I cannot make my own yet, still have to reference some fella's repository for this?
 5.3) I changed it to "Glennpedley/whatsapp-push-notify-action@main" 
@@ -163,7 +163,10 @@ DID NOT WORK
 5.5) I changed it to "Glennpedley/CluelessDevOps/whatsapp-push-notify-action@main"
 DID NOT WORK
 5.6) I changed it to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action"
-
+So, why is this? Because in the fella's bloody repository there are other files there that also runs!!! Bloody hell. Just went to see his repository, so many files, and found the file where the text "Yay!Push event triggered in master branch"!!!
+So I cloned his repository by forking the hell out of it. Then, I am going to copy and adjust one file at a time  to see which ones are needed, instead of adjusting from my clone.
 6) line 116:-
-Changed the 'Start!' to "Hello?"
+Changed the 'Start!' to "Hello?" am gonna skipp this set now and copy the files over and get back to this...
+
+COPY FILES OVER TO REPOSITORY / Other normal people say...clone/fork lah..apa copy copy?
 
