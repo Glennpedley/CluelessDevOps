@@ -142,7 +142,7 @@ WORKS. Can put many types <br> <br>
 
 2) line 105:-  <br> 
 2.1) the "uses" from "actions/checkout@main" to  "actions/checkout@v2 (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.  <br>
-IT WORKS. Both can be used. <br> <br>
+IT WORKS. Both can be used. <br> 
 
 2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action" <br>
 Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work) so changed back to  "actions/checkout@v2" <br> <br>
@@ -183,3 +183,4 @@ DOES NOT SEEM TO WORK>>> SEEMS LIKE STILL NEED TO HAVE THAT LINK????? U know why
 8) line 113:- <br> <br>
 Added "uses: Glennpedley/CluelessDevOps@main"
 WORKS! But why cannot work without THIS line??? Is this not in my own repository oledi? <br>
+Will figure this out in next few changes to codes.
