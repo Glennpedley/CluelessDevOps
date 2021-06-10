@@ -12,7 +12,7 @@ jobs:
           auth_token: ${{ secrets.auth_token }}
           to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
           
-        uses: Glennpedley/whatsapp-push-notify-action@main
+        uses: Glennpedley/CluelessDevOps@main
 
      
       
