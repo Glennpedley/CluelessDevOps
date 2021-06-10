@@ -110,7 +110,6 @@ jobs:
           auth_token: ${{ secrets.AUTH_TOKEN }}
           to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
 
-
           uses: ishween/whatsapp-push-notify-action@master
       
       - name : Run
@@ -131,19 +130,27 @@ nothing jalan.
 
 SO with the above "test" I did some changes to test to find out for myself what works and what does not, ONE by bloody ONE.
 This readme is bascially to see that there are different versions and which codes we can use and works and which ones does not, more or less.
-I changed
-1) the "on" to include a pull request (yupe, it works, so if only one like push, can type push without the [] or with also can. But when more than one, just put [ then the event type separated by comma(s), and close with] (how the hell did that underline come in here?)
+
+I changed;
+1) line 100:-
+the "on" to include a pull request (yupe, it works, so if only one like push, can type push without the [] or with also can. But when more than one, just put [ then the event type separated by comma(s), and close with] (how the hell did that underline come in here?)
 WORKS. Can put many types
 
-2) the "uses" from "actions/checkout@main" to  "actions/checkout@v2 (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.
+2) line 105:- 
+2.1) the "uses" from "actions/checkout@main" to  "actions/checkout@v2 (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.
 IT WORKS. Both can be used. 
 
-3) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action
-Does NOT seem to work, and after changing to Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action (also does NOT seem to work) so changed back to  actions/checkout@v2
+2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action"
+Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work) so changed back to  "actions/checkout@v2"
 
-4) I removed the id cos I dont know what file path that means at all.
+3) line 107:-
+I removed the "id" cos I dont know what file path that means at all. All I read was that this was input path to use.
 STILL WORKS.
-5) I edited the secret to use CAPITAL letter, will test if camel works just as well....testing...testing....testing....testing...
+
+4) lines 109-111:-
+I edited the "secrets" path to use CAPITAL letter, will test if camel works just as well....testing...testing....testing....testing...
 OKAY! BOTH WORKS, so capital or camel letters both also can use for secrets path.
 
+5) line 113:-
+I changed "ishween/whatsapp-push-notify-action@master" to "Glennpedley/whatsapp-push-notify-action@master"
 
