@@ -153,5 +153,10 @@ OKAY! BOTH WORKS, so capital or camel letters both also can use for secrets path
 
 5) line 113:-
 5.1) I removed "ishween/whatsapp-push-notify-action@master"
+DID NOT WORK - so means, I have to reference this repository for "something" and I am thinking that is why the "text" in the whatsapp message is?
 5.2) I changed this uses to "Glennpedley/whatsapp-push-notify-action@master"
+DID NOT WORK - so, I cannot make my own yet, still have to reference some fella's repository for this?
+
+6) line 116:-
+Changed the 'Start!' to "Hello?"
 
