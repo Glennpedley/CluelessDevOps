@@ -184,4 +184,6 @@ DOES NOT SEEM TO WORK>>> SEEMS LIKE STILL NEED TO HAVE THAT LINK????? U know why
 Added "uses: Glennpedley/CluelessDevOps@main"
 WORKS! But why cannot work without THIS line??? Is this not in my own repository oledi? <br>
 Will figure this out in next few changes to codes along with what the "run: | echo Start!" is all about is possible.
-Deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository?
+Deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository? 
+Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over.
+Let's see if this works.
