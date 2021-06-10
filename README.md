@@ -143,5 +143,7 @@ Does NOT seem to work, and after changing to Glennpedley/CluelessDevOps/github/a
 
 4) I removed the id cos I dont know what file path that means at all.
 STILL WORKS.
-5) I edited the secret to use CAPITAL letter, will test if camel works just as well.
+5) I edited the secret to use CAPITAL letter, will test if camel works just as well....testing...testing....testing....testing...
+OKAY! BOTH WORKS, so capital or camel letters both also can use for secrets path.
+
 
