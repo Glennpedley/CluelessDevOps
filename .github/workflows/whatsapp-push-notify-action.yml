@@ -5,12 +5,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Glennpedley/CLuelessDevOps/whatsapp-push-notify-action.yml@main
+      - uses: - uses: actions/checkout@master
       - name: whatsapp-notify
-        run: echo 'I got it!'
-       
-         
-        env:
+    
+         env:
           account_sid: ${{ secrets.ACCOUNT_SID }}
           auth_token: ${{ secrets.AUTH_TOKEN }}
           to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
+          
+        uses: Glennpedley/CLuelessDevOps/whatsapp-push-notify-action@main
+        name: run
+                run: |
+                echo 'I got it!'
