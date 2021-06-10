@@ -1,4 +1,4 @@
-name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
+name: When one of the folloiwning events occur in the master branch, a message is sent to the Whatsapp.
 on: [push, pull_request, issues, fork, watch]
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
           auth_token: ${{ secrets.auth_token }}
           to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
           
-        uses: Glennpedley/CluelessDevOps/whatsapp-push-notify-action@master
+        uses: ishween/whatsapp-push-notify-action@master
 
      
       
