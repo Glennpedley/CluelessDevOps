@@ -170,3 +170,9 @@ Changed the 'Start!' to "Hello?" am gonna skipp this set now and copy the files 
 
 COPY FILES OVER TO REPOSITORY / Other normal people say...clone/fork lah..apa copy copy?
 
+So I cloned that fella's one over.
+Changed the "text" message to be sent to the whatsapp which was in the "main.py" file; and made a commit to see if I could get MY own message.
+YAYYY It Works! 
+Now I wanna see if it works with the link to the fella's repository or can I delete that from the workflow main.yml file
+DOES NOT SEEM TO WORK>>> SEEMS LIKE STILL NEED TO HAVE THAT LINK?????
+
