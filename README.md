@@ -94,17 +94,34 @@ To encrypt them, create new secrets in your repository named account_sid, auth_t
 Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml.
 And I edited it to the following properties to newly edited  whatsapp-push-notify-action.yml file
 name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
-on: push
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: whatsapp-notify
-        run: echo 'Start!'
+        id: whatsapp-notify
         env:
-          account_sid: ${{ secrets.account_sid }}
-          auth_token: ${{ secrets.auth_token }}
-          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
+          account_sid: ${{ secrets.ACCOUNT_SID }}
+          auth_token: ${{ secrets.AUTH_TOKEN }}
+          to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
+
+
+          uses: ishween/whatsapp-push-notify-action@master
+      
+      - name : Run
+        run: |
+          echo 'Start!'
 
 Then I test by creating a branch and try to do a push..whatever that is... I only know commit..what the hell is a push?
+
+This sends me a whatsapp message saying
+
+Yay! Push event triggered in master branch
+WHere the hell did these text come from and how can I edit them?
+
+I think they came from iishween/whatsapp-push-notify-action@master cos when i change to 
+glennpedley/whatsapp-push-notify-action@master
+
+nothing jalan.
