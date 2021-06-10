@@ -139,6 +139,7 @@ WORKS. Can put many types
 IT WORKS. Both can be used. 
 
 3) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action
+Does NOT seem to work, and after changing to Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action (also does NOT seem to work) so changed back to  actions/checkout@v2
 
 4) I removed the id cos I dont know what file path that means at all.
 STILL WORKS.
