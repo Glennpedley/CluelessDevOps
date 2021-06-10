@@ -9,8 +9,8 @@ jobs:
         run: echo 'Start!'
 
         env:
-          account_sid: ${{ secrets.account_sid }}
-          auth_token: ${{ secrets.auth_token }}
-          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
+          account_sid: ${{ secrets.ACCOUNT_SID }}
+          auth_token: ${{ secrets.AUTH_TOKEN }}
+          to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NO }}
           
       
