@@ -213,4 +213,6 @@ jobs:
         run: echo 'Start!'
 ```
 
-From here on out will check others if have time.
+From here on out will check others if have time. <br>
+
+p/s for the messages to whatsapp chat, live, need to see the WHatsapp chat. Posted a picture here for visual effects.
