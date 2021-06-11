@@ -96,8 +96,8 @@ Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-a
 NOTICE - this is the file name, not the actual path or action, later will show you no need use this name IF your repository is another name, a great example would be CluelessDevOps (oh wow, what a great repository name!) <br>
 And I edited it to the following properties to newly edited  "whatsapp-push-notify-action.yml" file;
  <br>
- ```
-name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
+
+```name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
 on: [push] 
 jobs: 
   build:   
@@ -190,8 +190,8 @@ Deleted the cloned repositoy. Then not working? WTH has this got to do with the 
 Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over.
 Let's see if this works.Something is wrong with Twilio. The action ran fine.
 This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work. So, now going to the one that did NOT work to reconnect with the Sandbox in Twilio and try again. The last few said was outside the window and needed to use a template (under logged messages in Twilio). OKAY IT WORKS!!! SO MAKE SURE TWILIO IS CONNECTED BY CHECKING THE SANDBOX, connect again if necessary.
-```  
-name: When one of the following events occur in the master branch, a message is sent to the Whatsapp.
+ 
+```name: When one of the following events occur in the master branch, a message is sent to the Whatsapp.
 on: [push, pull_request, issues, fork, watch]
 jobs:
   build:
