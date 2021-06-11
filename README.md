@@ -138,26 +138,26 @@ SO after this, I am going to start to edit the codes to learn which code is need
 SO after this, I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process. <br>
 
 I changed;  <br>
-1) line 100:- <br>
+1) line 101:- <br>
 the "on" to include a pull request (yupe, it works, so if only one like push, can type push without the [] or with also can. But when more than one, just put [ then the event type separated by comma(s), and close with] (how the hell did that underline come in here?) <br>
 WORKS. Can put many types <br> <br> 
 
-2) line 105:-  <br> 
+2) line 106:-  <br> 
 2.1) the "uses" from "actions/checkout@main" to  "actions/checkout@v2 (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.  <br>
 IT WORKS. Both can be used. <br> 
 
 2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action" <br>
 Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work) so changed back to  "actions/checkout@v2" <br> <br>
 
-3) line 107:- <br>
+3) line 108:- <br>
 I removed the "id" cos I dont know what file path that means at all. All I read was that this was input path to use. <br>
 STILL WORKS. <br> <br>
 
-4) lines 109-111:- <br>
+4) lines 110-112:- <br>
 I edited the "secrets" path to use CAPITAL letter, will test if camel works just as well....testing...testing....testing....testing... <br>
 OKAY! BOTH WORKS, so capital or camel letters both also can use for secrets path. <br> <br>
 
-5) line 113:- <br>
+5) line 114:- <br>
 5.1) I removed "ishween/whatsapp-push-notify-action@master" <br>
 DID NOT WORK - so means, I have to reference this repository for "something" and I am thinking that is why or where the "text" in the whatsapp message is living? <br>
 5.2) I changed this uses to "Glennpedley/whatsapp-push-notify-action@master" <br>
@@ -178,19 +178,23 @@ So I cloned that fella's one over. <br>
 Changed the "text" message to be sent to the whatsapp which was in the "main.py" file; and made a commit to see if I could get MY own message. <br>
 YAYYY It Works!  <br>
 Now I wanna see if it works with the link to the fella's repository or can I delete that from the workflow main.yml file <br>
-7) line 113:- <br>
+7) line 114:- <br>
 Deleted "uses: ishween/whatsapp-push-notify-action@master" <br>
 DOES NOT SEEM TO WORK>>> SEEMS LIKE STILL NEED TO HAVE THAT LINK????? U know why? Cos need to link to somewhere to run the "other" files and so far, I have not created a link to run from MY OWN repository. <br>
  <br>
-8) line 113:- <br> <br>
+8) line 114:- <br> <br>
 Added "uses: Glennpedley/CluelessDevOps@main"
-WORKS! But why cannot work without THIS line??? Is this not in my own repository oledi? <br>
-Will figure this out in next few changes to codes along with what the "run: | echo Start!" is all about is possible.
-Deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository? 
-Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over.
+WORKS! But why cannot work without THIS line??? Is this not in my own repository oledi? <br><br>
+Will figure this out in next few changes to codes along with what the "run: | echo Start!" is all about is possible.<br>
+So I deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository? (ABSOLUTELY NOTHING, somehow Twilio's Sandbox got diconnected)
+Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over. (Deleted the license - this one is for others to use my stuff)<br>
 Let's see if this works.Something is wrong with Twilio. The action ran fine.
-This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work. So, now going to the one that did NOT work to reconnect with the Sandbox in Twilio and try again. The last few said was outside the window and needed to use a template (under logged messages in Twilio). OKAY IT WORKS!!! SO MAKE SURE TWILIO IS CONNECTED BY CHECKING THE SANDBOX, connect again if necessary.
- 
+This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work. So, now going to the one that did NOT work to reconnect with the Sandbox in Twilio and try again. The last few said was outside the window and needed to use a template (under logged messages in Twilio). OKAY IT WORKS!!! SO MAKE SURE TWILIO IS CONNECTED BY CHECKING THE SANDBOX, connect again if necessary.<br>
+9) line 116-118:-<br>
+SO far only know the | is for something to do with environment, I think.
+Deleted this and it could nto run.<br>
+Added run: 'Start!', and still cannot run.<br>
+
 ```name: When one of the following events occur in the master branch, a message is sent to the Whatsapp.
 on: [push, pull_request, issues, fork, watch]
 jobs:
