@@ -69,17 +69,17 @@ So I went to my repository called CluelessDevOps and created the .github/workflo
 
 I then went to the .github/workflows/ directory, created a new file called learn-github-actions.yml (yeah I copied the name, so sue me) and added the following code. <br>
 
-name: learn-github-actions 
-on: [push] 
-jobs: 
-  check-bats-version: 
-    runs-on: ubuntu-latest 
-    steps: 
-      - uses: actions/checkout@v2 
-      - uses: actions/setup-node@v1 
-      - run: npm install -g bats 
-      - run: bats -v 
-
+```name: learn-github-actions 
+    on: [push] 
+    jobs: 
+      check-bats-version: 
+        runs-on: ubuntu-latest 
+        steps: 
+          - uses: actions/checkout@v2 
+          - uses: actions/setup-node@v1 
+          - run: npm install -g bats 
+          - run: bats -v 
+```
  <br>
 Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository. WHere got PUSH button? DUn have also. <br>
 
@@ -96,6 +96,7 @@ Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-a
 NOTICE - this is the file name, not the actual path or action, later will show you no need use this name IF your repository is another name, a great example would be CluelessDevOps (oh wow, what a great repository name!) <br>
 And I edited it to the following properties to newly edited  "whatsapp-push-notify-action.yml" file;
  <br>
+ ```
 name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
 on: [push] 
 jobs: 
@@ -115,6 +116,7 @@ jobs:
       - name : Run
         run: |
           echo 'Start!'
+```
  <br>
 Then I test by creating a branch and try to do a push...whatever that is... I only know commit..what the hell is a push again? <br>
 
@@ -188,7 +190,7 @@ Deleted the cloned repositoy. Then not working? WTH has this got to do with the 
 Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over.
 Let's see if this works.Something is wrong with Twilio. The action ran fine.
 This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work. So, now going to the one that did NOT work to reconnect with the Sandbox in Twilio and try again. The last few said was outside the window and needed to use a template (under logged messages in Twilio). OKAY IT WORKS!!! SO MAKE SURE TWILIO IS CONNECTED BY CHECKING THE SANDBOX, connect again if necessary.
-  
+```  
 name: When one of the following events occur in the master branch, a message is sent to the Whatsapp.
 on: [push, pull_request, issues, fork, watch]
 jobs:
@@ -205,5 +207,6 @@ jobs:
         uses: Glennpedley/CluelessDevOps@main
       - name : Run
         run: echo 'Start!'
+```
 
 From here on out will check others if have time.
