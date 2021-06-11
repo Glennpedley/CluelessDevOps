@@ -187,7 +187,7 @@ Added "uses: Glennpedley/CluelessDevOps@main"
 WORKS! But why cannot work without THIS line??? Is this not in my own repository oledi? <br><br>
 Will figure this out in next few changes to codes along with what the "run: | echo Start!" is all about is possible.<br>
 So I deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository? (ABSOLUTELY NOTHING, somehow Twilio's Sandbox got diconnected)
-Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over. (Deleted the license - this one is for others to use my stuff)<br>
+Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over. (Updated-Deleted the license - this one is for others to use my stuff-STILL WORKS)<br>
 Let's see if this works.Something is wrong with Twilio. The action ran fine.
 This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work. So, now going to the one that did NOT work to reconnect with the Sandbox in Twilio and try again. The last few said was outside the window and needed to use a template (under logged messages in Twilio). OKAY IT WORKS!!! SO MAKE SURE TWILIO IS CONNECTED BY CHECKING THE SANDBOX, connect again if necessary.<br>
 9) line 116-118:-<br>
