@@ -162,7 +162,7 @@ So knowing a bit more about what can work and what cannot, after this, I am goin
 I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process.
 <h1>This READMe is bascially to see that there are different versions and which codes we can use and works and which ones does not, more or less. NOT for those who just copy and run the code but more for those who want to know a bit more about what was copied</h1>.
  <br>
-SO after this, I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process. <br>
+After this, I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process. <br>
 
 I changed;  <br>
 1) line 2:- <br>
@@ -170,7 +170,7 @@ the "on" to include a pull request (yupe, it works, so if only one like push, ca
 WORKS. Can put many types <br> <br> 
 
 2) line 7:-  <br> 
-2.1) the "uses" from "actions/checkout@main" to  "actions/checkout@v2 (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.  <br>
+2.1) the "uses" from "actions/checkout@main" to  "actions/checkout@v2" (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.  <br>
 IT WORKS. Both can be used. <br> 
 
 2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action" <br>
@@ -207,7 +207,7 @@ YAYYY It Works!  <br>
 Now I wanna see if it works with the link to the fella's repository or can I delete that from the workflow main.yml file <br>
 7) line 114:- <br>
 Deleted "uses: ishween/whatsapp-push-notify-action@master" <br>
-DOES NOT SEEM TO WORK>>> SEEMS LIKE STILL NEED TO HAVE THAT LINK????? U know why? Cos need to link to somewhere to run the "other" files and so far, I have not created a link to run from MY OWN repository. <br>
+DOES NOT SEEM TO WORK>>> SEEMS LIKE STILL NEED TO HAVE THAT LINK????? U know why? Cos need to link to somewhere to run the "other" files and so far, I have not created a link to run from MY OWN repository. This is where one would advice to clone the repository instead of creating a workflow and copying one file at a time<br>
  <br>
 8) line 15:- <br> <br>
 Added "uses: Glennpedley/CluelessDevOps@main"
@@ -215,11 +215,11 @@ WORKS! But why cannot work without THIS line??? Is this not in my own repository
 Will figure this out in next few changes to codes along with what the "run: | echo Start!" is all about is possible.<br>
 So I deleted the cloned repositoy. Then not working? WTH has this got to do with the cloned repository? (ABSOLUTELY NOTHING, somehow Twilio's Sandbox got diconnected)
 Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over. (Updated-Deleted the license - this one is for others to use my stuff-STILL WORKS)<br>
-Let's see if this works.Something is wrong with Twilio. The action ran fine.
+Let's see if this works. Something is wrong with Twilio. The action ran fine.
 This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work. So, now going to the one that did NOT work to reconnect with the Sandbox in Twilio and try again. The last few said was outside the window and needed to use a template (under logged messages in Twilio). OKAY IT WORKS!!! SO MAKE SURE TWILIO IS CONNECTED BY CHECKING THE SANDBOX, connect again if necessary.<br>
 9) line 17-19:-<br>
-SO far only know the | is for something to do with environment, I think.
-Deleted this and it could nto run.<br>
+So far only know the "|" is for something to do with environment, I think.
+Deleted this and it could NOT run.<br>
 Added run: 'Start!', and still cannot run.<br>
 
 ```name: When one of the following events occur in the master branch, a message is sent to the Whatsapp.
@@ -228,7 +228,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v2
       - name: whatsapp-notify
    
         env:
@@ -240,7 +240,7 @@ jobs:
         run: echo 'Start!'
 ```
 
-From here on out will check others if have time. <br>
+From here on out will check others if have time. But whatever the above code is, is the one that runs well enough for me for now <br>
 
 
 Nice or not? Hope this helps people.
