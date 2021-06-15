@@ -1,6 +1,29 @@
 # CluelessDevOps
-<h1 align="center">Clueless DevOps stuff from NUS class</h1>
-
+<h1 align="center">Clueless DevOps stuff from NUS class</h1><br>
+First off what the files here are.. then only.. what I did and how they got here.<br>
+a) .github/workflows<br>
+This is a "workflow" folder. Inside this folder would be the codes to run "Actions" of GitHub (see the "Actions" tab in GitHub), when an event occurs (which is defined in the codes of this folder). So, this is the part where automation or the CI/CD part comes into play.<br>
+b) Dockerfile<br>
+This is what I would say is the IKEA guy, the container, the one that ensures all the systems and tools that are needed are in place and updated in order for the codes in (a) to run.<br>
+c) action.yml<br>
+Come to think of it, I have not really explored this file except to change the author and name descriptions. I am now thinking whether this file is needed at all hahhaha ok maybe needed to identify(name) the action that we want to run in the workflow folder and here is the interesting part... to run the Dockerfile... so pay close attention now... the spelling here of the "Dockerfile" (image) has to match the file name (b) or it won't run. Don't believe me? Go test it out.<br>
+d)main.py<br>
+This file is mainly interacting with Twilio, where some API magic happens. It got the requirements from Twilio to make a request and then sends a body of message... which we can adjust to own liking in text which will then be sent to the assigned mobile number(s).<br>
+e) test for push<br>
+Maybe I should change the name... but this is basically a "test" file... to edit and make changes via the "commit" button (especially when we do not want to edit a perfectly written ReadMe file just to perform a "commit").<br>
+f)TwilioSandbox.png<br>
+This is a screenshot of the Twilio Sandbox. Get this connected by <br>
+i) creating a contact (Twilio) with the number +14155238886 given by Twilio<br>
+ii) opening a whatsapp chat (pls tell me we all have installed whatsapp first) and then sending the Twilio coded message which Twilio has specially assigned to each Twilio account... (hence the screen shot to show us what type of message to be sent, highlighted in yellow) .. soemthing like... join funny-clown <br>
+iii) once Twilio receives it, (message received by Twilio), Twilio will send a message to our whatsapp chat. Something like this
+Twilio Sandbox: ✅ You are all set! The sandbox can now send/receive messages from whatsapp:+14155238886. Reply stop to leave the sandbox any time.
+<br>
+ g)TwilioMessageLogs.png<br>
+This is a screenshot of the messages that transferred between Twilio and our whatsapp account. Come and view here if we have some messages we are supposed to receive but did not and see if it is logged here. Sometimes the is a failure to send out the message and it can be viewed here and nothing wrong with our code.<br>
+h) WhatsappnotificationfromGitHubviaTwilio.jpg <br>
+This is a screenshot of the Whatsapp message received from this whole workflow process. The ultimate goal of this workflow. To get a whatsapp message when an event specified on out code occurs. <br>
+ 
+ 
 <p>This is how I am doing the DevOps class homework. Starting from totally Dunno Clueless mode, yet again.</p><br>
 First off, to get hands on familiarity with GitHub. <br>Then only go and do the clone lah, commit lah, deploy lah, trigger lah, Actions lah dunno wat shit. <br>
 So I started off, after creating a repository, by learning how to branch off the main. <br>
@@ -138,26 +161,26 @@ I am going to start to edit the codes to learn which code is needed and if possi
 SO after this, I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process. <br>
 
 I changed;  <br>
-1) line 101:- <br>
+1) line 2:- <br>
 the "on" to include a pull request (yupe, it works, so if only one like push, can type push without the [] or with also can. But when more than one, just put [ then the event type separated by comma(s), and close with] (how the hell did that underline come in here?) <br>
 WORKS. Can put many types <br> <br> 
 
-2) line 106:-  <br> 
+2) line 7:-  <br> 
 2.1) the "uses" from "actions/checkout@main" to  "actions/checkout@v2 (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.  <br>
 IT WORKS. Both can be used. <br> 
 
 2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action" <br>
 Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work cos as mentioned earliet, this is not a path..tried just Glennpedley/CluelessDevOps) so changed back to  "actions/checkout@v2" . <br> <br>
 
-3) line 108:- <br>
+3) line 9:- <br>
 I removed the "id" cos I dont know what file path that means at all. All I read was that this was input path to use. <br>
 STILL WORKS. <br> <br>
 
-4) lines 110-112:- <br>
+4) lines 11-13:- <br>
 I edited the "secrets" path to use CAPITAL letter, will test if camel works just as well....testing...testing....testing....testing... <br>
 OKAY! BOTH WORKS, so capital or camel letters both also can use for secrets path. <br> <br>
 
-5) line 114:- <br>
+5) line 15:- <br>
 5.1) I removed "ishween/whatsapp-push-notify-action@master" <br>
 DID NOT WORK - so means, I have to reference this repository for "something" and I am thinking that is why or where the "text" in the whatsapp message is living? <br>
 5.2) I changed this uses to "Glennpedley/whatsapp-push-notify-action@master" <br>
@@ -182,7 +205,7 @@ Now I wanna see if it works with the link to the fella's repository or can I del
 Deleted "uses: ishween/whatsapp-push-notify-action@master" <br>
 DOES NOT SEEM TO WORK>>> SEEMS LIKE STILL NEED TO HAVE THAT LINK????? U know why? Cos need to link to somewhere to run the "other" files and so far, I have not created a link to run from MY OWN repository. <br>
  <br>
-8) line 114:- <br> <br>
+8) line 15:- <br> <br>
 Added "uses: Glennpedley/CluelessDevOps@main"
 WORKS! But why cannot work without THIS line??? Is this not in my own repository oledi? <br><br>
 Will figure this out in next few changes to codes along with what the "run: | echo Start!" is all about is possible.<br>
@@ -190,7 +213,7 @@ So I deleted the cloned repositoy. Then not working? WTH has this got to do with
 Thinking maybe cos I did not copy the "License" file over and somehow, it affected this? Coped the License file over. (Updated-Deleted the license - this one is for others to use my stuff-STILL WORKS)<br>
 Let's see if this works.Something is wrong with Twilio. The action ran fine.
 This is the working code so far to be checked further. Using ONE Twilio account, it ran fine but when changed Twilio secrets, it did not work. So, now going to the one that did NOT work to reconnect with the Sandbox in Twilio and try again. The last few said was outside the window and needed to use a template (under logged messages in Twilio). OKAY IT WORKS!!! SO MAKE SURE TWILIO IS CONNECTED BY CHECKING THE SANDBOX, connect again if necessary.<br>
-9) line 116-118:-<br>
+9) line 17-19:-<br>
 SO far only know the | is for something to do with environment, I think.
 Deleted this and it could nto run.<br>
 Added run: 'Start!', and still cannot run.<br>
@@ -215,6 +238,5 @@ jobs:
 
 From here on out will check others if have time. <br>
 
-p/s for the messages to whatsapp chat, live, need to see the WHatsapp chat. Posted a picture here for visual effects.
 
-Nice or not?
+Nice or not? Hope this helps people.
