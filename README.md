@@ -27,7 +27,7 @@ Yeah, this is THE file we are reading here. The one that gives an explanation (o
 <br>
  <br>
  <br>
-<h2> Alright, now comes the "then only.. what I did and how they got here" </h2>
+<h2 align = "center"> Alright, now comes the "then only.. what I did and how they got here" </h2>
 <p>This is how I am doing the DevOps class homework. Starting from totally Dunno Clueless mode, yet again.</p><br>
 First off, to get hands on familiarity with GitHub. <br>Then only go and do the clone lah, commit lah, deploy lah, trigger lah, Actions lah dunno wat shit. <br>
 So I started off, after creating a repository, by learning how to branch off the main. <br>
@@ -40,7 +40,7 @@ I then made a Pull request, which is say hey main, there are some changes I made
  <br>
 <p>So, basically, from my own file, I have a main and from the main, branches can be made where changes made to branches are not updated to main or destroying the main. Branches drop off and die also nevermind, main one still okay. Once the branches, test, deploy all okay, then can make pull request to merge with main..... AAAAAAND WHO APPROVES the pull requests? ME! Siapa raja? ME! Siapa lembu? Kita juga orangnya.</p> <br> <br>
 
-<h2 align="center">Now the SHow and Tell itself</h2>
+<h2 align="center">Now the Show and Tell itself</h2>
 (Intructions)
 Project 2: CI/CD <br>
 Your Task <br>
@@ -58,7 +58,7 @@ So we basically clone one repository that have all the above. Why not just say C
 
  <br>
  <br>
-(Instrcutions) 
+(Instructions) 
 Pushing new commits to the repository should trigger a workflow that  <br>
 does something with your code.   <br>
 It could be  <br>
