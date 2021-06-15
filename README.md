@@ -153,7 +153,9 @@ This sends me a whatsapp message saying <br>
 WHere the hell did these text come from and how can I edit them? 
 
 I think they came from iishween/whatsapp-push-notify-action@master  <br>
-cos when i change to  <br>
+
+<h2>3.  EDIT the WORKFLOW my OWN codes where possible</h3>
+Remember that "iishween/whatsapp-push-notify-action@master" line? when i change to  <br>
 glennpedley/whatsapp-push-notify-action@master <br>
 nothing jalan. (found out, it was indeed from the repository I copied from, in a file named main.py, we'll get to this later and how we are SOOooOOo gonna change this. )
  <br>
