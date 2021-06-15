@@ -147,7 +147,7 @@ WORKS. Can put many types <br> <br>
 IT WORKS. Both can be used. <br> 
 
 2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action" <br>
-Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work cos as mentioned earliet, this is not a path, just try Glennpedley/CluelessDevOps) so changed back to  "actions/checkout@v2" . <br> <br>
+Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work cos as mentioned earliet, this is not a path..tried just Glennpedley/CluelessDevOps) so changed back to  "actions/checkout@v2" . <br> <br>
 
 3) line 108:- <br>
 I removed the "id" cos I dont know what file path that means at all. All I read was that this was input path to use. <br>
