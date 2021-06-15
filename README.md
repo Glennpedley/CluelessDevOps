@@ -174,7 +174,6 @@ WORKS. Can put many types <br> <br>
 2) line 7:-  <br> 
 2.1) the "uses" from "actions/checkout@main" to  "actions/checkout@v2" (just cos having the "main" and "master" is a bit confusing as to which is the main master.. so kill them both, just use the mighty v.  <br>
 IT WORKS. Both can be used. <br> 
-
 2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action" <br>
 Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work cos as mentioned earliet, this is not a path..tried just Glennpedley/CluelessDevOps) so changed back to  "actions/checkout@v2" . <br> <br>
 
