@@ -3,7 +3,7 @@
 
 <p>This is how I am doing the DevOps class homework. Starting from totally Dunno Clueless mode, yet again.</p><br>
 First off, to get hands on familiarity with GitHub. <br>Then only go and do the clone lah, commit lah, deploy lah, trigger lah, Actions lah dunno wat shit. <br>
-So I started off by learning how to branch off the main. <br>
+So I started off, after creating a repository, by learning how to branch off the main. <br>
   <p>I created a branch (clone the main), named it (whatever lah) and made changes to it (commit, is like... save my changes) <br>
 I then made a Pull request, which is say hey main, there are some changes I made in this file that I want the main file to now update itself with. <br>
   (I got to do this, cos you know, I dont just DO IT ONE TIME at the main file, but dua kerja, DO TWO TIMES, do at branch then add in Pull request action) <br>
@@ -55,7 +55,7 @@ Workflow(s) (Ok, Ini ada) <br>
 README.md (or any other document) that explains the outcome, your steps, and your thought process (oooOooOo Ini MESTI ADA!) <br>
 Start with an empty (or initialized) GitHub repository. (am going to START with empty one) <br>
 
-Okay, initialized GitHUb means, all the changes from the point I started to make the changes. Goodness totally forgot about this. All changes made in GitHub and not on local computer.  <br>
+Okay, initialized GitHUb means, all the changes from the point I started to make the changes. Goodness totally forgot about this. All changes made in GitHub and NOT on local computer.  <br>
 
 As you implement and make changes, do a commit + push each time (YES, AKU BERJAYA!) <br>
 So how the heck do I initialize from here??? Dont have, did the local computer and committed the push ONCE, then just did the changes in GitHub instead. Where is the "push" button in GitHub by the way? Only thing I can find is commit, and to push to main is to do some pull-request, where the "push"? <br> <br>
@@ -85,15 +85,15 @@ Then performed the "Commit these changes" and "push"(what the hell lah weii,,, j
 
 
 <h2>2. CHANGE THE WORKFLOW to WHATSAPP Notification. (Adjust the workflow to what I want)</h2> <br>
-Okayyy so I got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB-cheh). What I need to do is to find a Whatsapp workflow to use and replace mine with that..(oh found out I need to sign up for Twilio from the readme of the other guy's repository) <br>
+Okayyy so I got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB-cheh). What I need to do is to find a Whatsapp workflow to use and replace mine with that..(oh found out I need to sign up for Twilio from the readme of the other guy's repository).PLUS Whatsapp messages ONLY to phone numbers not groups... so IF I am gonna need to send to a group, I am gonna have to do it phone number by phone number. <br>
  <br>
-SO I did signed up at Twilio (at first didnt get anumber but got some US number ater cos nothing was working so might as well get it in case it affects the workflow)
-Then from my Twilio dashboard fetch Account Sid and Auth Token and put them in secrets page of github, which means... go to the repository I wan to put secrets in, then look for the "gear" icon which means settings, there are TWO gear icons that I saw... use the one in a line of many tabs. <br>
+SO I did signed up at Twilio (at first didn't get anumber but got some US number after cos nothing was working so might as well get it in case it affects the workflow-which I later experimented again, was not necessary-So no need to get a Twilio phone number for this to run)
+Then from my Twilio dashboard, fetch Account Sid and Auth Token and put them in secrets page of github, which means... go to the repository I wan to put secrets in, then look for the "gear" icon which means settings( there are TWO gear icons that I saw... use the one in a line of many tabs) and go find your secrets. Each repository can have it own secrets. <br>
  <br>
-To encrypt them, create new secrets in your repository named account_sid, auth_token, to_whatsapp_no and give it's value. Well, I did that, took the values from Twilio. <br>
+To encrypt them, create new secrets in your repository named account_sid, auth_token, to_whatsapp_no and give it's value. Well, I did that, took the values from Twilio. The important thing to note here is that the name chosen for the secrets' accounts has to be same with the one in the code for the code to retrieve it. <br>
  <br>
 Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml. <br>
-NOTICE - this is the file name, not the actual path or action, later will show you no need use this name IF your repository is another name, a great example would be CluelessDevOps (oh wow, what a great repository name!) <br>
+NOTICE - this is the file name, not the actual path or action, later will show you, no need use this name IF your repository is another name, a great example would be CluelessDevOps (oh wow, what a great repository name!) <br>
 And I edited it to the following properties to newly edited  "whatsapp-push-notify-action.yml" file;
  <br>
 
@@ -122,18 +122,18 @@ Then I test by creating a branch and try to do a push...whatever that is... I on
 
 This sends me a whatsapp message saying <br>
 
-Yay! Push event triggered in master branch
-WHere the hell did these text come from and how can I edit them?
+<h4>Yay! Push event triggered in master branch</h4><br>
+WHere the hell did these text come from and how can I edit them? 
 
 I think they came from iishween/whatsapp-push-notify-action@master  <br>
 cos when i change to  <br>
 glennpedley/whatsapp-push-notify-action@master <br>
-nothing jalan.
+nothing jalan. (found out, it was indeed from the repository I copied from, in a file named main.py, we'll get to this later and how we are SOOooOOo gonna change this. )
  <br>
   <br>
 So knowing a bit more about what can work and what cannot, after this, I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process, to "test" I did some changes to test to find out for myself what works and what does not, ONE by bloody ONE. <br>
-SO after this, I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process.
-<h1>This ReadMe is bascially to see that there are different versions and which codes we can use and works and which ones does not, more or less</h1>.
+I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process.
+<h1>This READMe is bascially to see that there are different versions and which codes we can use and works and which ones does not, more or less. NOT for those who just copy and run the code but more for those who want to know a bit more about what was copied</h1>.
  <br>
 SO after this, I am going to start to edit the codes to learn which code is needed and if possible what code does what in the process. <br>
 
@@ -147,7 +147,7 @@ WORKS. Can put many types <br> <br>
 IT WORKS. Both can be used. <br> 
 
 2.2) the "uses" from "actions/checkout@main" to ./.github/actions/whatsapp-push-notify-action" <br>
-Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work) so changed back to  "actions/checkout@v2" <br> <br>
+Does NOT seem to work, and after changing to "Glennpedley/CluelessDevOps/github/actions/whatsapp-push-notify-action" (also does NOT seem to work cos as mentioned earliet, this is not a path, just try Glennpedley/CluelessDevOps) so changed back to  "actions/checkout@v2" . <br> <br>
 
 3) line 108:- <br>
 I removed the "id" cos I dont know what file path that means at all. All I read was that this was input path to use. <br>
