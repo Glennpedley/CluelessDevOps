@@ -1,27 +1,29 @@
 # CluelessDevOps
 <h1 align="center">Clueless DevOps stuff from NUS class</h1><br>
 First off what the files here are.. then only.. what I did and how they got here.<br>
-a) .github/workflows<br>
+<h5>a) .github/workflows</h5><br>
 This is a "workflow" folder. Inside this folder would be the codes to run "Actions" of GitHub (see the "Actions" tab in GitHub), when an event occurs (which is defined in the codes of this folder). So, this is the part where automation or the CI/CD part comes into play.<br>
-b) Dockerfile<br>
+<h5>b) Dockerfile</h5><br>
 This is what I would say is the IKEA guy, the container, the one that ensures all the systems and tools that are needed are in place and updated in order for the codes in (a) to run.<br>
-c) action.yml<br>
+<h5>c) action.yml</h5><br>
 Come to think of it, I have not really explored this file except to change the author and name descriptions. I am now thinking whether this file is needed at all hahhaha ok maybe needed to identify(name) the action that we want to run in the workflow folder and here is the interesting part... to run the Dockerfile... so pay close attention now... the spelling here of the "Dockerfile" (image) has to match the file name (b) or it won't run. Don't believe me? Go test it out.<br>
-d)main.py<br>
+<h5>d)main.py</h5><br>
 This file is mainly interacting with Twilio, where some API magic happens. It got the requirements from Twilio to make a request and then sends a body of message... which we can adjust to own liking in text which will then be sent to the assigned mobile number(s).<br>
-e) test for push<br>
+<h5>e) test for push</h5><br>
 Maybe I should change the name... but this is basically a "test" file... to edit and make changes via the "commit" button (especially when we do not want to edit a perfectly written ReadMe file just to perform a "commit").<br>
-f)TwilioSandbox.png<br>
+<h5>f)TwilioSandbox.png</h5><br>
 This is a screenshot of the Twilio Sandbox. Get this connected by <br>
 i) creating a contact (Twilio) with the number +14155238886 given by Twilio<br>
 ii) opening a whatsapp chat (pls tell me we all have installed whatsapp first) and then sending the Twilio coded message which Twilio has specially assigned to each Twilio account... (hence the screen shot to show us what type of message to be sent, highlighted in yellow) .. soemthing like... join funny-clown <br>
 iii) once Twilio receives it, (message received by Twilio), Twilio will send a message to our whatsapp chat. Something like this
 Twilio Sandbox: ✅ You are all set! The sandbox can now send/receive messages from whatsapp:+14155238886. Reply stop to leave the sandbox any time.
 <br>
- g)TwilioMessageLogs.png<br>
+ <h5>g)TwilioMessageLogs.png</h5><br>
 This is a screenshot of the messages that transferred between Twilio and our whatsapp account. Come and view here if we have some messages we are supposed to receive but did not and see if it is logged here. Sometimes the is a failure to send out the message and it can be viewed here and nothing wrong with our code.<br>
-h) WhatsappnotificationfromGitHubviaTwilio.jpg <br>
+<h5>h) WhatsappnotificationfromGitHubviaTwilio.jpg </h5><br>
 This is a screenshot of the Whatsapp message received from this whole workflow process. The ultimate goal of this workflow. To get a whatsapp message when an event specified on out code occurs. <br>
+<h5>h) README</h5><br>
+Yeah, this is THE file we are reading here. The one that gives an explanation (of sorts) of what is in this repository.
  
  
 <p>This is how I am doing the DevOps class homework. Starting from totally Dunno Clueless mode, yet again.</p><br>
