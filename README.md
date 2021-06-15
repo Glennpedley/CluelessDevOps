@@ -25,8 +25,8 @@ This is a screenshot of the Whatsapp message received from this whole workflow p
 <h5>i) README</h5><br>
 Yeah, this is THE file we are reading here. The one that gives an explanation (of sorts) of what is in this repository.
 <br>
- 
- 
+ <br>
+ <br>
 <h2> Alright, now comes the "then only.. what I did and how they got here" </h2>
 <p>This is how I am doing the DevOps class homework. Starting from totally Dunno Clueless mode, yet again.</p><br>
 First off, to get hands on familiarity with GitHub. <br>Then only go and do the clone lah, commit lah, deploy lah, trigger lah, Actions lah dunno wat shit. <br>
