@@ -109,19 +109,21 @@ I then went to the .github/workflows/ directory, created a new file called learn
           - run: bats -v 
 ```
  <br>
-Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository. WHere got PUSH button? DUn have also. <br>
+Then performed the "Commit these changes" and "push"(what the hell lah weii,,, just now PULL now PUSH fucking cibai... ) them to my GitHub repository. Where got PUSH button? DUn have also. This then completes my "creating a repository" part. Gonna edit my repository next. <br>
+
 
 
 <h2>2. CHANGE THE WORKFLOW to WHATSAPP Notification. (Adjust the workflow to what I want)</h2> <br>
-Okayyy so I got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB-cheh). What I need to do is to find a Whatsapp workflow to use and replace mine with that..(oh found out I need to sign up for Twilio from the readme of the other guy's repository).PLUS Whatsapp messages ONLY to phone numbers not groups... so IF I am gonna need to send to a group, I am gonna have to do it phone number by phone number. <br>
+Okayyy so I got the workflow files in the directory. Now I want to change them, I would like to a workflow that will send a whatsapp message to a group (guess who I am going to BOMB-cheh). What I need to do is to find a Whatsapp workflow to use and replace mine with that... I ran a search in GitHub's Marketplace tab for Whatsapp and found a few repositories, and it looks like they copied off each other kinda thing.
+Along the wau, reading them repositories, the things we need to do includes the need to sign up for Twilio (read from the readme of the other guys' repositories).PLUS Whatsapp messages ONLY to phone numbers not groups... so IF I am gonna need to send to a group, I am gonna have to do it phone number by phone number and get the recipients to activate their whatsapp with Twilio's sandbox.... well, that's not gonna happen. <br>
  <br>
-SO I did signed up at Twilio (at first didn't get anumber but got some US number after cos nothing was working so might as well get it in case it affects the workflow-which I later experimented again, was not necessary-So no need to get a Twilio phone number for this to run)
-Then from my Twilio dashboard, fetch Account Sid and Auth Token and put them in secrets page of github, which means... go to the repository I wan to put secrets in, then look for the "gear" icon which means settings( there are TWO gear icons that I saw... use the one in a line of many tabs) and go find your secrets. Each repository can have it own secrets. <br>
+SO I did signed up at Twilio (at first didn't get a number but later I got some US number cos nothing was working so might as well get it in case it affects the workflow-which I later experimented again, was not necessary-So NO NEED to get a Twilio phone number for this to run)
+Then from my Twilio dashboard, fetch Account Sid and Auth Token and put them in secrets page of github, which means... go to the repository I want to put secrets in, then look for the "gear" icon which means settings( there are TWO gear icons that I saw... use the one in a line of many tabs) and go find your secrets. Each repository can have it own secrets. <br>
  <br>
-To encrypt them, create new secrets in your repository named account_sid, auth_token, to_whatsapp_no and give it's value. Well, I did that, took the values from Twilio. The important thing to note here is that the name chosen for the secrets' accounts has to be same with the one in the code for the code to retrieve it. <br>
+To encrypt them, create new secrets in your repository named "account_sid", "auth_token", "to_whatsapp_no", and paste in them the relevant values (namely the account sid from the Twilio website into the account sid secrets file, the auth token taken from the Twilio website into the auth_token named secrets file and our own phone number +65XXXXXXXX into the to_whatsapp_no file. The important thing to note here is that the <em>name chosen for the secrets' accounts has to be same with the one in the code</em> for the code in the yml file for the yml file to be able to retrieve it. <br>
  <br>
-Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml. <br>
-NOTICE - this is the file name, not the actual path or action, later will show you, no need use this name IF your repository is another name, a great example would be CluelessDevOps (oh wow, what a great repository name!) <br>
+Then I change my workflow directory to  .github/workflows/whatsapp-push-notify-action.yml. I did this by replacing the name in the box that contains the old name then saving it<br>
+NOTICE - this is the file name, not the actual path or action, no need to use this name IF your repository is another name, a great example would be CluelessDevOps (oh wow, what a great repository name! What I mean is, if you see my latest code and the one I copied, line 144 ( uses: ishween/whatsapp-push-notify-action@master) and line 242(uses: Glennpedley/CluelessDevOps@main) , the these are paths, which is not the same as the file name being mentioned here. This is the file name for yml <br>
 And I edited it to the following properties to newly edited  "whatsapp-push-notify-action.yml" file;
  <br>
 
@@ -151,10 +153,10 @@ Then I test by creating a branch and try to do a push...whatever that is... I on
 This sends me a whatsapp message saying <br>
 
 <h4>Yay! Push event triggered in master branch</h4><br>
-WHere the hell did these text come from and how can I edit them? 
+Assignment can be considered DONE here itself. Got the notification, don't need to know how everything else works to get things done. So the next steps on are my adventures into what makes these tick. Where the hell did these text come from and how can I edit them? 
 
 I think they came from iishween/whatsapp-push-notify-action@master  <br>
-
+The following steps, in summary will show how I verntured and learned the long hard way that, I am using someone else's repository and in that person's repository are the files that make these run. I am going to copy these files to put them into MY own repository so that I dont depend on outside and the files run from my own repository.<br>
 <h2>3.  EDIT the WORKFLOW my OWN codes where possible</h3>
 Remember that "iishween/whatsapp-push-notify-action@master" line? when i change to  <br>
 glennpedley/whatsapp-push-notify-action@master <br>
