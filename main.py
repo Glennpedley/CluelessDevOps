@@ -60,7 +60,7 @@ else:
     response += f"A new *{GITHUB_EVENT_NAME}* event was triggered by *{GITHUB_ACTOR}* in your repository *{REPOSITORY}*\n\n"
     response += f"*Repository URL*: {repo_url}"
 
-client = Client(account_sid, auth_token)
+client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 message = client.messages.create(
                               body='THIS is MY notification from GitHub via Twilio-Jimmmy the Virgin Slayer',
